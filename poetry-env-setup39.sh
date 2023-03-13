@@ -14,7 +14,7 @@ sudo apt install git
 curl https://pyenv.run | bash
 
 # Set up pyenv in the shell
-export PATH="$HOME/.pyenv/bin:$PATH"
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -32,7 +32,8 @@ pyenv global 3.9.1
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
 # Add poetry to the shell path
-export PATH="$HOME/.poetry/bin:$PATH"
+echo 'export PATH="$HOME/.poetry/bin:$PATH"' >> ~/.bashrc
+
 
 # See the Poetry documentation for instructions on enabling tab completion in the shell
 poetry help completions
